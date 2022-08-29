@@ -45,6 +45,9 @@ body {
     letter-spacing: 0.03em;
 
 }
+.title-hidden {
+    display: none;
+}
 header {
     border-bottom: 1px solid #ECECEC;
 }
