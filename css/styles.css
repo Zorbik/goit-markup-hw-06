@@ -10,8 +10,8 @@
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 *:focus-visible {
-    /* outline: 3px double tomato; */
-    outline-offset: 3px;
+    outline: 2px double var(--logo-color);
+    outline-offset: 1.5px;
 }
 a {
     text-decoration: none;
@@ -598,7 +598,7 @@ footer {
     background-color:transparent;
     padding-left: 16px;
     border-radius: 4px;
-    border-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--primary-background-color);
 }
 .subs-button {
@@ -612,6 +612,11 @@ footer {
     background-color: var(--logo-color);
     border: 0;
     border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em
 }
 .subs-icon {
     width: 24px;
@@ -697,26 +702,26 @@ footer {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-color);
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .modal-form {
     width: 448px;
 }
 .modal-form-item {
-    position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     list-style: none;
  }
+ .form-field {
+    position: relative;
+    width: 100%;
+ }
 .modal-label {
-    position: absolute;
-    top: -4px;
-    transform: translateY(-100%);
-
+    margin-bottom: 4px;
     color: var(--secondary-color);
 }
 
@@ -739,6 +744,7 @@ footer {
 }
 .modal-input,
 .modal-textarea {
+    width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 0;
@@ -776,6 +782,7 @@ footer {
     text-align: center;
     margin-bottom: 30px;
 }
+
 .modal-form-checkbox a {
     color: var(--logo-color);
     text-decoration: underline;
@@ -802,12 +809,19 @@ footer {
     margin-top: 3px;
     margin-left: -23px;
     background-image: url(../images/check-off.svg);
+    
 
     transition: background-image 250ms var(--timing-function);
+
+}
+.modal-checkbox:focus + .checkbox {
+    outline: 2px double var(--logo-color);
+    outline-offset: 1.5px;
 }
 .check {
     align-items: baseline;
     padding-left: 23px;
+    color: var(--secondary-color);
 }
 .modal-checkbox:checked + .checkbox {
     background-image: url(../images/check-on.svg);
@@ -815,7 +829,6 @@ footer {
 }
 .modal-send-button {
     position: absolute;
-    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 700;
