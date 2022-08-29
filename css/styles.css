@@ -307,7 +307,7 @@ header .contacts {
     border-radius: 0px 0px 4px 4px;
     background-color: var(--primary-background-color);
 }
-span,
+.logo span,
 .current, 
 .site-nav:hover,
 .site-nav:focus,
